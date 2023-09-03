@@ -1,8 +1,7 @@
-# Сделать прямоугольник самостоятельно
+border = "*" * 17
+spaces = " " * 15
 
-print("*" * 17, sep="")
-print("*", "\n", "*", sep="                ")
-print("*", "\n", "*", sep="                ")
-print("*" * 17, sep="")
-
-# print("*****************\n*               *\n*               *\n*****************")
+print(border, sep="")
+print("*", "*", sep=spaces)
+print("*", "*", sep=spaces)
+print(border, sep="")
