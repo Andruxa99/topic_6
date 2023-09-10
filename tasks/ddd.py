@@ -1,7 +1,8 @@
-border = "*" * 17
-spaces = " " * 15
+# border = "*" * 17
+# spaces = " " * 15
+#
+# print(border, sep="")
+# print("*", "*", sep=spaces)
+# print("*", "*", sep=spaces)
+# print(border, sep="")
 
-print(border, sep="")
-print("*", "*", sep=spaces)
-print("*", "*", sep=spaces)
-print(border, sep="")
