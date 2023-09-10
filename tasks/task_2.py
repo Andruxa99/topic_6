@@ -1,16 +1,14 @@
 # Первый вариант решения
-number: int = int(input("Введите целое число: "))  # пользовательский ввод
+number: int = int(input("Введите целое число: "))
 
 if number > 0:
-    print("1")
+    print(1)
 elif number < 0:
-    print("-1")
-elif number == 0:
-    print("0")
+    print(-1)
+else:
+    print(0)
+
 # Второй вариант решения
 
-# result = "Положительное число" if number > 0 \
-#     else "Отрицательное число или ноль"
-# print(result)
-
-# TODO: В следующий раз объясню правильное решение
+result: int = 1 if number > 0 else (-1 if number < 0 else 0)
+print(result)

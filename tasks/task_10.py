@@ -12,6 +12,15 @@ print("Выберите алфавит:""\n"
       "2. Кириллица")
 
 alphabet = int(input("Введите номер алфавита: "))
-if alphabet >= 3:
+if alphabet not in (1, 2):
     print("Упс! Выбран неверный режим. Попробуйте ещё раз...")
-user_input = input("Введите букву: ")
+else:
+    user_input = input("Введите букву: ")
+    hints = None
+
+    # hints = "Введите букву кириллицы: "
+    # hints = "Введите букву латинского алфавита: "
+    #
+    # let = input(hints)
+
+# print(ALPHABETS["ru_vowels"])
