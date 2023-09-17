@@ -2,10 +2,9 @@
 number: int = int(input("Введите целое число: "))
 number_2: float = float(input("Введите дробное число: "))
 string: str = input("Введите строку: ")
+proverka = (number, number_2, string)
 
-if number and number_2:
-    print("Нет")
-elif string != "":
+if any(proverka):
     print("Да")
 else:
     print("Нет")
