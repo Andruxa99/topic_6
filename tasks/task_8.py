@@ -16,8 +16,10 @@ elif magic == "Трансформация":
     print("Трансформированное число:", number_1 - number_2)
 elif magic == "Объединение":
     print("Произведение магических чисел:", number_1 * number_2)
-if magic == "Исчезновение":
-    if number_1 / 2 and number_2 == 0:
+elif magic == "Исчезновение":
+    if number_2 == 0:
         print("Ошибка: Второе число равно нулю!")
+    else:
+        print("Исчезновение", number_1 / number_2)
 else:
     print("Ошибка: Некорректная операция")
