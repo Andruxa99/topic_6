@@ -20,31 +20,21 @@ else:
 
     # 2. Сначала определяем что-есть что
 
-# Условие для первого алфавита
+    # Условие для первого алфавита
+    if alphabet == 1:
+        hints = "Введите букву латинского алфавита: "
 
+    # Условие для второго алфавите
+    else:
+        hints = "Введите букву кириллицы: "
 
-hints = "Введите букву латинского алфавита: "
+    let = input(hints)
 
-# Условие для второго алфавите
+    # 3. 4. 5
+    # Пишем логику определения буквы
+    if let in ...:
+        print("Ы - гласная буква!")
+    elif let in ...:
+        print("J - согласная буква")
 
-
-hints = "Введите букву кириллицы: "
-
-let = input(hints)
-
-# 3. 4. 5
-# Пишем логику определения буквы
-if hints not in ALPHABETS:
     print("Упс! Неизвестная буква. Попробуйте другую!")
-
-if hints == "Латинский" and hints == "Кириллица":
-    print(hints in ALPHABETS["en_vowels"], "- согласная буква!")
-elif hints:
-    print(hints in ALPHABETS["en_consonants"], "- гласная буква!")
-elif hints == "Кириллица":
-    print(hints in ALPHABETS["ru_vowels"], "- согласная буква!")
-elif hints:
-    print(hints in ALPHABETS["ru_consonants"], "- гласная буква!")
-
-
-# print(ALPHABETS["ru_vowels"])
