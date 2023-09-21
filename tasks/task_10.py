@@ -32,9 +32,13 @@ else:
 
     # 3. 4. 5
     # Пишем логику определения буквы
-    if let in ...:
-        print("Ы - гласная буква!")
-    elif let in ...:
-        print("J - согласная буква")
-
-    print("Упс! Неизвестная буква. Попробуйте другую!")
+    if let in ALPHABETS["ru_vowels"]:
+        print(let, "- гласная буква!")
+    elif let in ALPHABETS["ru_consonants"]:
+        print(let, "- согласная буква буква!")
+    elif let in ALPHABETS["en_vowels"]:
+        print(let, "- гласная буква!")
+    elif let in ALPHABETS["en_consonants"]:
+        print(let, "- согласная буква")
+    else:
+        print("Упс! Неизвестная буква. Попробуйте другую!")
