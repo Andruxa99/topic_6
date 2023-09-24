@@ -18,20 +18,14 @@ else:
 
     hints = None
 
-    # 2. Сначала определяем что-есть что
-
-    # Условие для первого алфавита
     if alphabet == 1:
         hints = "Введите букву латинского алфавита: "
 
-    # Условие для второго алфавите
     else:
         hints = "Введите букву кириллицы: "
 
     let = input(hints)
 
-    # 3. 4. 5
-    # Пишем логику определения буквы
     if let in ALPHABETS["ru_vowels"]:
         print(let, "- гласная буква!")
     elif let in ALPHABETS["ru_consonants"]:
