@@ -1,4 +1,4 @@
-ALPHABETS = {
+ALPHABETS: dict = {
     "en_vowels": "AEIOU",
     "en_consonants": "BCDFGHJKLMNPQRSTVWXYZ",
     "ru_vowels": "АЕЁИОУЫЭЮЯ",
@@ -6,39 +6,30 @@ ALPHABETS = {
 }
 
 print("Добро пожаловать в программу \"Буква-Детектив\"!", end="\n\n")
-
 print("Выберите алфавит:""\n"
       "1. Латинский" "\n"
-      "2. Кириллица")
-# Здесь не хватает пустой строки, см. примеры вывода
-alphabet = int(input("Введите номер алфавита: "))
+      "2. Кириллица\n")
+
+alphabet: int = int(input("Введите номер алфавита: "))
 if alphabet not in (1, 2):
     print("Упс! Выбран неверный режим. Попробуйте ещё раз...")
 else:
-
-    hints = None
-
+    hints: None | str = None
+    vowels: None | str = None
+    consonants: None | str = None
     if alphabet == 1:
         hints = "Введите букву латинского алфавита: "
+        vowels = ALPHABETS["en_vowels"]
+        consonants = ALPHABETS["en_consonants"]
     else:
         hints = "Введите букву кириллицы: "
+        vowels = ALPHABETS["ru_vowels"]
+        consonants = ALPHABETS["ru_consonants"]
 
-    let = input(hints)
-
-    # Хорошая работа, давай немного улучшим код!
-
-    # В коде есть повторения, можно улучшить
-    # 1. Выше можем создать две переменные
-    # vowels и consonants, и туда записать значения гласных и согласных
-    # 2. Тогда, здесь у нас остается только if-elif-else
-    # 3. Это будет очень похоже на реализацию `hints`
-    if let in ALPHABETS["ru_vowels"]:
+    let: str = input(hints)
+    if let in vowels:
         print(let, "- гласная буква!")
-    elif let in ALPHABETS["ru_consonants"]:
+    elif let in consonants:
         print(let, "- согласная буква буква!")
-    elif let in ALPHABETS["en_vowels"]:
-        print(let, "- гласная буква!")
-    elif let in ALPHABETS["en_consonants"]:
-        print(let, "- согласная буква")
     else:
         print("Упс! Неизвестная буква. Попробуйте другую!")
