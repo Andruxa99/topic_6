@@ -1,19 +1,10 @@
-a = int(input())
+number: int = int(input("Введите целое число: "))
 
-# match a:
-#     case _ if a < 42:
-#         print('Less')
-#     case _ if a == 42:
-#         print('The answer')
-#     case _ if a > 42:
-#         print('Greater')
-
-match [a < 42, a == 42]:
-    # match [False, False]:
-
-    case [True, False]:
-        print('Меньше')
-    case [_, True]:
-        print('Ответ')
-    case [False, False]:
-        print('Больше')
+match number:
+    case _ if number > 0:
+        print(1)
+    case _ if number < 0:
+        print(-1)
+    case _:
+        print(0)
+        
