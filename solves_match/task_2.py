@@ -7,4 +7,3 @@ match number:
         print(-1)
     case _:
         print(0)
-        

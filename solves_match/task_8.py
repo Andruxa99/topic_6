@@ -10,17 +10,18 @@ number_1: float = float(input("Введите первое число: "))
 number_2: float = float(input("Введите второе число: "))
 magic: str = input("Введите магическую операцию: ")
 
-match number_1, number_2, magic:
-    case _ if magic == "Призыв":
+match magic:
+    case "Призыв":
         print("Сумма магических сил чисел:", number_1 + number_2)
-    case _ if magic == "Трансформация":
+    case "Трансформация":
         print("Трансформированное число:", number_1 - number_2)
-    case _ if magic == "Объединение":
+    case "Объединение":
         print("Произведение магических чисел:", number_1 * number_2)
-    case _ if number_2 == 0:
-        print("Ошибка: Второе число равно нулю!")
-    case _ if magic == "Исчезновение":
-        print("Исчезновение", number_1 / number_2)
+    case "Исчезновение":
+        match number_2:
+            case 0:
+                print("Ошибка: Второе число равно нулю!")
+            case _:
+                print("Исчезновение", number_1 / number_2)
     case _:
         print("Ошибка: Некорректная операция")
-

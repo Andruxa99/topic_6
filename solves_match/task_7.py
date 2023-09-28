@@ -4,8 +4,8 @@ string: str = input("Введите строку: ")
 
 data: tuple = (number, number_2, string)
 
-match number, number_2, string:
-    case _ if all(data):
+match all(data):
+    case True:
         print("Да")
     case _:
         print("Нет")
